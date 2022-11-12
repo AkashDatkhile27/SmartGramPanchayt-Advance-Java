@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home Page</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+ <link rel="stylesheet" type="text/css" href="css/slider.css">
+  <link rel="stylesheet" type="text/css" href="css/ticker.css">
+</head>
+<body>
+<div id="main">
+<nav>
+<img src="img/glogo.gif" width="300" height="50" style="padiing:5px;">
+<ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="myschemes.html">Schemes</a></li>
+    <li><a href="mygallery.html">Gallery</a></li>
+    <li><a href="Complaint.html">Complaint Box</a></li>
+    <li><a href="AdminLogin.html">Admin Login</a></li>
+  	</ul>
+</nav>
+
+<div>
+<aside id="leftside" style="background:#e5e5e5;">
+  
+    <marquee behavior="scroll"  onmouseover="this.stop()"
+                   onmouseout="this.start()" direction="up">
+ <h4>Amruteshwar</h4>
+    <img src="img/amruteshvar.jpg" width="160" height="100" alt="Natural" />
+    <h4>Siddheshwar</h4>
+    <img src="img/shidheshvar.jpg" width="160" height="100" alt="Natural" />
+      <h4>Caption 3</h4>
+   <img src="img/3.jpg" width="160" height="100" alt="Natural" />
+  </marquee>
+
+</aside>
+</div>
+<section>
+  <div  style="width:60%;float:left;right:0px;left:4%;position:relative;height:60%;">
+<div class="slideshow-container" >
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="img/1.jpg" style="width:100%;height:40%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="img/2.jpeg" style="width:100%;height:40%";>
+  
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="img/3.jpg" style="width:100%;height:40%">
+  
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<!--<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>-->
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</div>
+</section>
+
+<aside  id="rightside">
+   
+     <dt>News</dt>
+      <dt>News Heading 1</dt><dd>This is a snippet of the news. It could be the whole news item or it could link to another page containing...</dd>
+      <dt>News Heading 2</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+      <dt>News Heading 3</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+      <dt>News Heading 4</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+      
+      <dt>News Heading 4</dt><dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
+   
+</aside>
+	<footer id="footer" style="background-color:yellow;">
+    <p style="align:center;">© Grampanchayt Department All rights reserved.<p>
+  </footer>
+</div>
+</body>
+</html>

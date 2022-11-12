@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <title>Registaration Form</title>
+        <link rel="stylesheet" href="css\schemergestration.css">
+        <script type="text/javascript" lang="javascript" src="js\registration.js"></script>
+              <style>
+              
+              nav{
+  width: 100%;
+
+  line-height: 20px;
+  background-color: grey;
+  transition:0.8s;
+}
+nav ul li{
+  display: inline-block;
+  list-style: none;
+}
+nav ul{
+  float: right;
+  margin-right: 60px;
+
+}
+nav ul li a{
+  text-decoration: none;
+  background-color: grey;
+  color: black;
+  padding: 10px;
+  margin-right: 10px;
+}
+
+nav ul li a:hover{
+  background-color: white;
+  color: black;
+   height: 20px;
+ }
+              
+       .open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+        
+              
+               
+     
+      </style>
+    </head>
+       
+    <body>
+    <nav>
+<img src="img/glogo.gif" width="300" height="50" style="padiing:5px;">
+<ul>
+    <li><a href="http://localhost:8080/smartgrampanchayat/home.html">Home</a></li>
+    <li><a href="http://localhost:8080/smartgrampanchayat/myschemes.html">Schemes</a></li>
+    <li><a href="http://localhost:8080/smartgrampanchayat/mygallery.html">Gallery</a></li>
+    <li><a href="http://localhost:8080/smartgrampanchayat/Complaint.html">Complaint Box</a></li>
+    <li><a href="http://localhost:8080/smartgrampanchayat/AdminLogin.html">Admin Login</a></li>
+  	</ul>
+</nav>
+    <form action="http://localhost:8080/smartgrampanchayat/jsp/schemeregister.jsp" method="post">
+        <h1> Scheme Registaration Form</h1>
+        <div class="container"> 
+         <div class="row">
+                <div class="col-10">
+                    <label for="name"> Name:</label>
+                </div>
+                    <div class="col-90">
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required="">
+                </div>
+            </div>
+                    <div class="row">
+                <div class="col-10">
+                    <label for="email">Email:</label>
+                </div>
+                <div class="col-90">
+                    <input type="email" id="email" name="email" placeholder="it should contain @,." required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="mobile">Mobile:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="mobile" name="mobile" placeholder="only 10 digits are allowed" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="gender" required>Gender:</label>
+                </div>
+                <div class="col-90">
+                    <input type="radio" id="male" name="gender" value="male"/ >Male
+                    <input type="radio" id="female" name="gender" value="female"/>Female
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="dob">Date Of Birth:</label>
+                </div>
+                <div class="col-90">
+                 <input type="date" id="dob" name="dob" required="">   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="address">Address:</label>
+                </div>
+                <div class="col-90">
+                    <textarea name="address" id="address" cols="30" rows="10" required=""></textarea>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="city">City:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="city" name="city" maxlength="10" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="pincode">Area PIN:</label>
+                </div>
+                <div class="col-90">
+                    <input type="number" id="pin" name="pin" maxlength="6" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="state">State:</label>
+                </div>
+                <div class="col-90">
+                    <input type="text" id="state" name="state" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-10">
+                    <label for="Scheme" required >Available Scheme</label>
+                </div>
+                <div class="col-90">
+                    <select name="Scheme" id="Scheme">
+                        <option value=" ">Select Scheme To Apply</option>
+                        <option value="1">MATCHING GRANTS TO PANCHAYATS</option>
+                        <option value="2">HOUSING SCHEME: RAJIV AWAAS YOJANA 2008</option>
+                        <option value="3">RURAL GARBAGE DISPOSAL SCHEME 2005</option>
+                        <option value="4">GRANT-IN-AID</option>
+                        <option value="5">GRANTS TO WEAKER SECTION FOR STRENGTHENING THEIR ADMINISTRATION</option>
+                        <option value="6">Grants In Lieu of Octroi</option>
+                        <option value="7">Shelter Homes for Destitute Women, Teenage Mothers, Women who are victims of atrocities (Age Group of 16 to 60 years)</option>
+                        <option value="8">SCHEME FOR GRANT OF LOAN TO WEAKER SECTION FOR CONSTRUCTION/IMPROMENT/REPAIR OF HOUSES</option>
+                        <option value="9">LOANS TO VILLAGE PANCHAYATS UNDER REMUNERATIVE SCHEMES</option>
+                        <option value="10">Shubh Mangal Samuhik Vivah Scheme</option>
+                       <option value="11">DISASTER MANAGEMENT SCHEME AT PANCHAYAT LEVEL</option>
+                    </select>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-10">
+                    <label for="password">Password:</label>
+                </div>
+                <div class="col-90">
+                    <input type="password" id="password" name="password" maxlength="8" required="">
+                </div>
+            </div>
+            <div class="row">
+          <a href="jsp/schemeregister.jsp"> <input type="submit" value="Apply" onclick="SchemeDetails()" ></a> <!--pass the link of servlet register-->
+           
+            </div>  
+        </div>  
+       </form>
+       <button class="open-button" onclick="openForm()">Check Status</button>
+<div class="form-popup" id="myForm">
+  <form action="http://localhost:8080/smartgrampanchayat/jsp/schemestatus.jsp" class="form-container" method="post">
+    <h2>Enter Details To Check Status</h2>
+    <label for="mobile_no"><b>Mobile Number</b></label>
+    <input type="text" placeholder="Enter mobile number" name="mobile_no" required>
+     <label for="password"><b>Password</b></label>
+    <input type="password" placeholder="Enter password" name="password" required>
+    <input type="submit" class="btn" value="Check Status">
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+ </div>
+ 
+ 
+ <script>
+
+	function openForm() {
+	   document.getElementById("myForm").style.display = "block";
+	 }
+
+	 function closeForm() {
+	   document.getElementById("myForm").style.display = "none";
+	 }
+	 </script>
+       <footer id="footer" style="background-color:yellow;">
+    <p style="align:center;">© Grampanchayt Department All rights reserved.<p>
+  </footer>
+  
+    </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
